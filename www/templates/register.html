@@ -1,0 +1,38 @@
+<ion-view title="Register">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <div style="color:red;">{{errMsg}}</div>
+        <form class="list" name="registerForm" novalidate>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="user.firstname" placeholder="First Name" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="user.lastname" placeholder="Last Name" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Company</span>
+                    <input type="text" ng-model="user.company" placeholder="Company" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Company Email</span>
+                    <input type="email" ng-model="user.email" placeholder="Company Email" required>
+                </label>
+                 <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="user.username" placeholder="Username" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="user.password" placeholder="Password" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Confirm Password</span>
+                    <input type="password" ng-model="cuser.confirmPassword" placeholder="Confirm Password" required>
+                </label>
+            </ion-list>
+            <button type="submit" class="button button-positive button-block" ng-click="registerUser(registerForm.$valid)">Sign up</a>
+        </form>
+    </ion-content>
+</ion-view>

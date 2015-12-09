@@ -1,0 +1,30 @@
+<ion-view title="Projects">
+    <ion-content padding="true" class="has-header">
+    	
+        <!--<ion-list>
+            ion-item href="#/devops/viewalerts">Project 1</ion-item>
+            <ion-item href="#/devops/viewalerts">Project 2</ion-item
+        </ion-list-->
+        <div style="color:red;" ng-hide="clearErrMsg">{{errorMsg}}</div>
+        <div style="color:green" ng-hide="clearSuccMsg">{{successMsg}}</div>
+        <div class="list">
+ 			<div class="item item-input-inset">
+			   	<label class="item-input-wrapper">
+			    	<input type="text" ng-model="project.name" placeholder="Add Projects">
+			   	</label>
+   				<button class="button button-small button-positive" ng-click="addProjects()">
+			    	Add
+			   	</button>
+ 			</div>
+		</div>
+		<ul class="list">
+   			<li class="item" style="display:{{projects.length>0?'none':'block'}}">No Projects Added</li>
+   			<li class="item" ng-repeat="p in projects track by $index">
+    			<i class="ion-android-checkbox-outline"></i>
+    			<a class="projectName" href="#/devops/viewalerts" style="width:90%;display:inline-block;">{{p.name}}</a> 
+    			<!--span class="circle">5</span-->
+    			<button class="button button-small button-assertive" data-pid="{{p.id}}" ng-click="removeProjects($index, p.id)">Remove</button>
+    		</li>   
+		</ul>
+    </ion-content>
+</ion-view>

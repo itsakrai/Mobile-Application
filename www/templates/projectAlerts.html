@@ -1,0 +1,54 @@
+<ion-view title="Health Check">
+    <ion-content padding="true" class="has-header">
+        <h3>Alert Details</h3>
+        <ion-list>
+            <ion-item>
+            	<div class="{{status=='up'?'green':'red'}}">
+            		<span class="projectAlerts">Apache HTTP Server</span>
+            		<i ng-hide="status=='up'?true:false" class="ion-alert-circled icon-red"></i>
+            		<i ng-hide="status=='up'?false:true" class="ion-checkmark icon-green"></i>
+            	</div>
+            </ion-item>
+            <ion-item>
+            	<div class="{{status=='up'?'green':'red'}}">
+            		<span class="projectAlerts">MySQL Database Server</span>
+            		<i ng-hide="status=='up'?true:false" class="ion-alert-circled icon-red"></i>
+            		<i ng-hide="status=='up'?false:true" class="ion-checkmark icon-green"></i>
+            	</div>
+            </ion-item>
+            <ion-item>
+                <div>
+                    <span class="projectAlerts">CPU Utilization</span>
+                    <!--div>
+                        {{metrics}}
+                    </div-->
+                    <div>
+                        <canvas id="bar" class="chart chart-line" data="graph.data" labels="graph.labels" series='graph.series' height="50"></canvas>
+                    </div>
+                </div>
+            </ion-item>  
+            <ion-item>
+                <div>
+                    <span class="projectAlerts">NetworkIn Usage</span>
+                    <!--div>
+                        {{metrics}}
+                    </div-->
+                    <div>
+                        <canvas id="bar" class="chart chart-line" data="networkInGraph.data" labels="networkInGraph.labels" series='networkInGraph.series' height="50"></canvas>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div>
+                    <span class="projectAlerts">NetworkOut Usage</span>
+                    <!--div>
+                        {{metrics}}
+                    </div-->
+                    <div>
+                        <canvas id="bar" class="chart chart-line" data="networkOutGraph.data" labels="networkOutGraph.labels" series='networkInGraph.series' height="50"></canvas>
+                    </div>
+                </div>
+            </ion-item>          
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view title="Edit Info">
+    <ion-content padding="true" class="has-header">
+     <div style="color:red;">{{errMsg}}</div>
+     <div style="color:green;">{{msg}}</div>
+        <form class="list" name="editUser" novalidate>
+            <input type="hidden" ng-model="user.username" />
+            <label class="item item-input">
+                <span class="input-label">First Name</span>
+                <input type="text" ng-model="user.firstname" placeholder="First Name" required>
+            </label>
+            <ion-list></ion-list>
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" ng-model="user.lastname" placeholder="Last Name" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="user.password" placeholder="Password" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Confirm Password</span>
+                <input type="password" ng-model="cuser.confirmPassword" placeholder="Confirm Password" required>
+            </label>
+        </form>
+        <button class="button button-balanced button-block" ng-click="updateUser(editUser.$valid)">Update</button>
+    </ion-content>
+</ion-view>
