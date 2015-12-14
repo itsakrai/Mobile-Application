@@ -10,17 +10,22 @@ To run the project first -: download the project, then
 
 1) Install Node.js
 
-2) Install Ionic
+2) Install Ionic:
 In command prompt give command- $ npm install -g cordova ionic
 
-3) Add platform
+3) Add platform:
 Go into the project folder and run command- $ ionic platform add android
 
-4)Build project
+4)Build project:
 $ ionic build android
 
-5)Run on browser    or    Run on Emulator 
-$ ionic serve             $ ionic emulate android
+5)Run on browser:    
+$ ionic serve 
+
+or 
+
+Run on Emulator:
+$ ionic emulate android
 
 Team Members- Akrati Mohta, Pratyusha Movva, Rutul Amin, Karthik Kolichelimi
 
