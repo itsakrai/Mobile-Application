@@ -8,12 +8,12 @@ Detailed graphs are provided for the analysis.
 
 To run the project first -: download the project, then
 
-1) Install Node.js
+1)Install Node.js
 
-2) Install Ionic:
+2)Install Ionic:
 In command prompt give command- $ npm install -g cordova ionic
 
-3) Add platform:
+3)Add platform:
 Go into the project folder and run command- $ ionic platform add android
 
 4)Build project:
